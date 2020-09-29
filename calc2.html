@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+   *{
+     margin:0;
+     padding:0;
+    box-sizing: border-box;  
+   }
+   body{
+       background-image: url(download\ \(1\).jpg);
+       background-size: 100% 100%;
+   }
+   .formstyle{
+       display: flex;
+       height:100vh;
+       align-items: center;
+       justify-content: center;
+   }
+   form{
+      width:400px; 
+      height:300px;
+      border:1px solid whitesmoke;
+      outline:none;
+      color:black;
+   }
+   #app_name{
+       width:inherit;
+       display: flex;
+       height: 30px;
+       background-color:whitesmoke;
+       color:black;
+       font-size: small;
+       border:none;
+       
+
+   }
+  #answerstyle{
+      width:inherit;
+      display: flex;
+      height: 130px;
+      background-color:whitesmoke;
+      color:black;
+      font-size: 3rem;
+      text-align: right;
+      border:none;
+  }
+.layer1{
+    width:inherit;
+    display: flex;
+    height: 90px;
+    outline: none;
+    justify-content: center;
+}
+.layer2{
+    width:inherit;
+    display: flex;
+    height: 50px;
+    font-size: 2em;
+    outline: none;
+    justify-content: center;
+}
+.layer3{
+    width:inherit;
+    display: flex;
+    height: 50px;
+    font-size:smaller;
+    outline: none;
+    justify-content: center;
+}
+input{
+    flex:1;
+    font-size: 2em;
+    outline:none;
+    color:black;
+}
+.menu{
+    background-color:white;
+    color:black;
+    font-size: 2em;
+    outline:none;
+    border:none;
+
+}
+.side{
+    background-color:white;
+    border:none;
+}
+#clearbutton{
+    background-color:white;
+    font-size:small;
+
+}
+input:hover{
+    background-color: gainsboro;
+    border:1px solid gray;
+    outline:none;
+}
+#clearbutton:hover{
+    background-color: gainsboro;
+    border:1px solid gray;
+    outline:none;
+}
+ </style>
+
+</head>
+<body>
+    <div class="formstyle">
+        <form name="forms">
+        <input type="text" name='x'  value="Calculator" id="app_name">
+  
+        <input type="text" name="answers" id="answerstyle" >
+  
+       
+        
+        <div class="layer3">
+            <input type="button" class="side" name="" value="1/x" id="clearbutton" onclick="forms.answers.value=''">
+            <input type="button" class="side" name="" value="√" id="clearbutton" onclick="forms.answers.value=eval(forms.answers.value )">  
+            <input type="button" class="side" name="" value="x2" id="clearbutton" onclick="forms.answers.value =eval(forms.answers.value ) "> 
+            <input type="button" class="side" name="" value="÷" id="clearbutton" onclick="forms.answers.value=eval(forms.answers.value )">
+
+        </div>
+        <div class="layer2">
+            <input type="button" class="side" name="" value="CE" id="clearbutton" onclick="forms.answers.value=''">
+            <input type="button" class="side" name="" value="C" id="clearbutton" onclick="forms.answers.value=''">  
+            <input type="button" class="side" name="" value="=" id="clearbutton" onclick="forms.answers.value =eval(forms.answers.value ) "> 
+            <input type="button" class="side" name="" value="%" id="clearbutton" onclick="forms.answers.value=''">
+
+        </div>
+          <div class="layer1">
+         <input type="button" class="menu" value="7"  onclick="forms.answers.value +='7' ">
+         <input type="button" class="menu" value="8"  onclick="forms.answers.value +='8' ">
+         <input type="button" class="menu" value="9"  onclick="forms.answers.value +='9' ">
+         <input type="button" class="side" value="*"  onclick="forms.answers.value +='*' ">
+         <br></br>
+          </div>
+          <div class="layer1">
+            <input type="button" class="menu" value="4"  onclick="forms.answers.value +='4'">
+            <input type="button" class="menu" value="5"  onclick="forms.answers.value +='5'">
+            <input type="button" class="menu" value="6"  onclick="forms.answers.value +='6'">
+            <input type="button" class="side" value="-"  onclick="forms.answers.value +='-'">
+            <br></br>
+            </div>
+            <div class="layer1">
+                <input type="button" class="menu" value="1"  onclick="forms.answers.value +='1'">
+                <input type="button" class="menu" value="2"  onclick="forms.answers.value +='2'">
+                <input type="button" class="menu" value="3"  onclick="forms.answers.value +='3'">
+                <input type="button" class="side" value="+"  onclick="forms.answers.value +='+'">
+                <br></br>
+            </div> 
+            <div class="layer1">
+                <input type="button" class="side" value="±"  onclick="forms.answers.value +='±'">
+                <input type="button" class="menu" value="0"  onclick="forms.answers.value +='0'">
+                <input type="button" class="side" value="."  onclick="forms.answers.value +='.'">
+                <input type="button" class="side" value="/"  onclick="forms.answers.value +='/'">
+                <br></br>
+            </div> 
+
+
+      </form>
+    </div>
+</body>
+</html>
